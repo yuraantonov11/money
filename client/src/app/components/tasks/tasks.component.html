@@ -1,13 +1,21 @@
 <form class="well" (submit)="addTask($event)">
   <div class="form-group">
-    <input type="text" [(ngModel)]="title" name="title" placeholder="add task">
+    <md-input-container class="example-full-width">
+      <input mdInput [(ngModel)]="title" name="title" placeholder="Add task">
+    </md-input-container>
+    <!--<input type="text" [(ngModel)]="title" name="title" placeholder="add task">-->
   </div>
 </form>
 
 <div class="task-list">
   <div class="task" *ngFor="let task of tasks">
-    <input type="checkbox" checked="{{task.isDone}}">
+    <md-checkbox checked="{{task.isDone}}"></md-checkbox>
     <input type="text" readonly value="{{task.title}}">
-    <input type="button" value="delete" (click)="removeTask(task._id)">
+    <!--<md-input-container class="example-full-width">-->
+      <input mdInput placeholder="State">
+    <!--</md-input-container>-->
+    <button md-mini-fab (click)="removeTask(task._id)"><md-icon>delete</md-icon></button>
   </div>
 </div>
+
+
