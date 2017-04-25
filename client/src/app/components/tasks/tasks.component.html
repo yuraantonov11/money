@@ -1,11 +1,11 @@
-<form class="well" (submit)="addTask($event)">
-  <div class="form-group">
+<!--<form class="well" (submit)="addTask($event)">-->
+  <!--<div class="form-group">-->
     <md-input-container class="example-full-width">
       <input mdInput [(ngModel)]="title" name="title" placeholder="Add task">
     </md-input-container>
-    <!--<input type="text" [(ngModel)]="title" name="title" placeholder="add task">-->
-  </div>
-</form>
+    <!--&lt;!&ndash;<input type="text" [(ngModel)]="title" name="title" placeholder="add task">&ndash;&gt;-->
+  <!--</div>-->
+<!--</form>-->
 
 <div class="task-list">
   <div class="task" *ngFor="let task of tasks">
