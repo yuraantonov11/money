@@ -1,11 +1,11 @@
-<!--<form class="well" (submit)="addTask($event)">-->
-  <!--<div class="form-group">-->
+<form class="well" (submit)="addTask($event)">
+  <div class="form-group">
     <md-input-container class="example-full-width">
       <input mdInput [(ngModel)]="title" name="title" placeholder="Add task">
     </md-input-container>
-    <!--&lt;!&ndash;<input type="text" [(ngModel)]="title" name="title" placeholder="add task">&ndash;&gt;-->
-  <!--</div>-->
-<!--</form>-->
+    <!--<input type="text" [(ngModel)]="title" name="title" placeholder="add task">-->
+  </div>
+</form>
 
 <div class="task-list">
   <div class="task" *ngFor="let task of tasks">
@@ -14,7 +14,9 @@
     <!--<md-input-container class="example-full-width">-->
       <input mdInput placeholder="State">
     <!--</md-input-container>-->
-    <button md-mini-fab (click)="removeTask(task._id)"><md-icon>delete</md-icon></button>
+    <button md-mini-fab (click)="removeTask(task._id)">
+      <md-icon>delete_forever</md-icon>
+    </button>
   </div>
 </div>
 

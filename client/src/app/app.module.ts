@@ -8,6 +8,9 @@ import { FormsModule } from '@angular/forms';
 import { MdButtonModule, MdCheckboxModule } from '@angular/material';
 import {MdInputModule} from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MdIconModule} from '@angular/material';
+
+
 
 
 import 'hammerjs';
@@ -23,6 +26,7 @@ import { TasksComponent }  from './components/tasks/tasks.component';
     // MaterialModule.forRoot(),
     BrowserAnimationsModule,
     MdButtonModule,
+    MdIconModule,
     MdCheckboxModule
   ],
   declarations: [ AppComponent, TasksComponent ],

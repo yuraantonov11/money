@@ -19,7 +19,7 @@ export class TaskService{
     console.log(task);
     console.log('task');
     return this.http.post(
-      '/api/task',
+      'http://localhost:3000/api/task',
       JSON.stringify(task),
       {headers: headers}
     )
@@ -27,7 +27,7 @@ export class TaskService{
   }
 
   removeTask(id: string){
-    return this.http.delete(`/api/task/${id}`)
+    return this.http.delete(`http://localhost:3000/api/task/${id}`)
       .map(res => res.json());
   }
 
