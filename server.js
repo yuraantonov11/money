@@ -4,6 +4,7 @@ const bodyParser = require('body-parser');
 
 const index = require('./routes/index');
 const tasks = require('./routes/tasks');
+const users = require('./routes/users');
 
 const  port = 3000;
 
@@ -42,6 +43,6 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 
 app.use('/', index);
-app.use('/api', tasks);
+app.use('/api', [tasks, users]);
 
 app.listen(port, () => console.log('server started on port ' + port));

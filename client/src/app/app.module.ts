@@ -16,9 +16,13 @@ import {MdIconModule} from '@angular/material';
 import 'hammerjs';
 import { AppComponent }  from './app.component';
 import { TasksComponent }  from './components/tasks/tasks.component';
+import { LoginComponent }  from './components/login/login.component';
+import { PageNotFoundComponent }  from './not-found.component';
+import { AppRoutingModule }  from './app.routing';
 
 @NgModule({
   imports:      [
+    AppRoutingModule,
     BrowserModule,
     HttpModule,
     FormsModule,
@@ -29,8 +33,14 @@ import { TasksComponent }  from './components/tasks/tasks.component';
     MdIconModule,
     MdCheckboxModule
   ],
-  declarations: [ AppComponent, TasksComponent ],
+  declarations: [
+    AppComponent,
+    TasksComponent,
+    PageNotFoundComponent,
+    LoginComponent
+  ],
   bootstrap:    [ AppComponent ],
   exports: [MdButtonModule, MdCheckboxModule]
 })
+
 export class AppModule { }

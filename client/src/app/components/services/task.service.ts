@@ -3,8 +3,8 @@ import { Http, Headers } from '@angular/http';
 import 'rxjs/add/operator/map';
 
 @Injectable()
-export class TaskService{
-  constructor(private http:Http){
+export class TaskService {
+  constructor(private http: Http) {
     console.log('Task Service initialized');
   }
 
@@ -13,7 +13,7 @@ export class TaskService{
       .map(res => res.json());
   }
 
-  addTask(task: any){
+  addTask(task: any) {
     const headers = new Headers();
     headers.append('Content-Type', 'application/json');
     console.log(task);
